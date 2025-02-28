@@ -398,6 +398,10 @@ def search():
     result = sujood_helper.search_mistake(user_input)
     return jsonify({"correction": result})
 
+@app.route('/healthz')
+def health_check():
+    return 'Healthy', 200
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True, use_reloader=False)  # Disable the use of the reloader` 
 
