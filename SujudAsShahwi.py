@@ -7,6 +7,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from fuzzywuzzy import process
 from flask import Flask, request, jsonify, render_template
+from waitress import serve
+
 
 class SujudAsShahwi:
     def __init__(self):
